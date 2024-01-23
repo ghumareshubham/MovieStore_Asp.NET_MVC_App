@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Movie Project - Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('css/movie.jpg') no-repeat center center fixed;
+          
+            background-size: cover;
+            color: #fff;
+            font-family: 'Arial', sans-serif; /* Choose a suitable font-family */
+            text-align: center;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .content {
+            max-width: 600px;
+            margin-top: 5px;
+            opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+            transform: scale(0.8); /* Set initial scale for the scale-in effect */
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+            .content.show {
+                opacity: 1; /* Change opacity to 1 to reveal the content */
+                transform: scale(1);
+            }
+
+        h1, p {
+            font-size: 3em;
+            margin-bottom: 20px;
+            
+        }
+
+        .btn-login {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #F9EFDB;
+            color: #F3B95F;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #910A67;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 15px;
+        }
+
+            .btn-login:hover {
+                background-color: #F3B95F;
+                color: #910A67; /* Change text color on hover */
+                border: 2px solid #FFEFE8;
+                transform: scale(1.1); /* Scale up on hover */
+            }
+    </style>
+</head>
+<body>
+
+    <div class="content" id="content">
+        <h1>Your Movie Project</h1>
+        <p>Welcome to the home page!</p>
+        <a href="/UserAuthentication/Login" class="btn-login mt-3">Start</a>
+    </div>
+    
+
+
+    <script>
+        // Add 'show' class to trigger the fade-in effect after a delay
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.getElementById('content').classList.add('show');
+            }, 500); // Adjust the delay time (in milliseconds) as needed
+        });
+    </script>
+
+</body>
+</html>
+

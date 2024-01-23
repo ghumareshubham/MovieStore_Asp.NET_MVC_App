@@ -1,0 +1,134 @@
+﻿ @model MovieStoreMvc.Models.DTO.RegistrationModel
+
+
+  @{
+  }
+
+  <form class="w-40" asp-action="Registration" method="post">
+      <h2 class="pb-10">SignUp Page</h2>
+
+      <div class="input-container">
+          <label asp-for="Name" class="w-40">Name</label>
+          <input type="text" class="input" asp-for="Name">
+          <div class="message-box pd-x-28 error">
+              <span asp-validation-for="Name"></span>
+          </div>
+      </div>
+
+      <div class="input-container">
+          <label asp-for="Email" class="w-40">Email</label>
+          <input type="email" class="input" asp-for="Email">
+          <div class="message-box pd-x-28 error">
+              <span asp-validation-for="Email"></span>
+          </div>
+      </div>
+
+      <div class="input-container">
+          <label asp-for="Username" class="w-40">Username</label>
+          <input type="text" class="input" asp-for="Username">
+      </div>
+
+      <div class="input-container">
+          <label asp-for="Password" class="w-40">Password</label>
+          <input type="password" class="input" asp-for="Password">
+          <div class="message-box pd-x-28 error">
+              <span asp-validation-for="Password"></span>
+          </div>
+      </div>
+
+      <div class="input-container">
+          <label asp-for="PasswordConfirm" class="w-40">Confirm Password</label>
+          <input type="password" class="input" asp-for="PasswordConfirm">
+          <div class="message-box pd-x-28 error">
+              <span asp-validation-for="PasswordConfirm"></span>
+          </div>
+      </div>
+
+
+
+      @if (TempData["msg"] != null)
+      {
+          <div class="alert mb-1">
+              @TempData["msg"]
+          </div>
+      }
+      <div class="input-container">
+          <button class="btn btn-default" type="submit">Register</button>
+          <a class="btn btn-sec" href="/UserAuthentication/Login">Login</a>
+      </div>
+  </form>
+ 
+
+
+
+
+
+
+ @* @model MovieStoreMvc.Models.DTO.RegistrationModel
+
+@{
+    Layout = null;
+}
+
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+@Html.ValidationSummary()
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 center-block">
+            <h3>Registration</h3>
+            <form asp-action="Registration" method="post">
+                <div class="form-group">
+                    <label>FName*</label>
+                    <input type="text" class="form-control" asp-for="FirstName" />
+                    <span class="text-danger" asp-validation-for="FirstName"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>LName*</label>
+                    <input type="text" class="form-control" asp-for="LastName" />
+                    <span class="text-danger" asp-validation-for="LastName"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" asp-for="Email" />
+                    <span class="text-danger" asp-validation-for="Email"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" asp-for="Username" />
+                    <span class="text-danger" asp-validation-for="Username"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Password (eg. John@123)</label>
+                    <input type="password" class="form-control" asp-for="Password" />
+                    <span class="text-danger" asp-validation-for="Password"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Password confirm</label>
+                    <input type="password" class="form-control" asp-for="PasswordConfirm" />
+                    <span class="text-danger" asp-validation-for="PasswordConfirm"></span>
+
+                </div>
+
+
+
+                @if (TempData["msg"] != null)
+                {
+                    <div class="form-group">
+                        <span class="text-info">@TempData["msg"]</span>
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-info">Registration</button>
+                <a class="btn btn-primary" href="/UserAuthentication/Login">Login</a>
+            </form>
+        </div>
+    </div>
+</div> *@
