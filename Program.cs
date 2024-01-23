@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//definding dependency injection
+//defining dependency injection
 builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IFileService, FileService>();
@@ -22,21 +22,21 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<DatabaseContext>()
     .AddDefaultTokenProviders();
 
-builder.Services.AddAuthorization(options =>
+/*builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
     
-});
+});*/
 
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.AccessDeniedPath = "/UserAuthentication/Login"; // 
+    options.AccessDeniedPath = "/Home/AccessDeniedPage"; // 
     options.LoginPath = "/UserAuthentication/Login";
 }
 );
 
-builder.Services.AddAuthentication(options =>
+/*builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -46,7 +46,7 @@ builder.Services.AddAuthentication(options =>
 {
     options.LoginPath = "/UserAuthentication/Login";
     options.AccessDeniedPath = "/UserAuthentication/Login";
-});
+});*/
 
 var app = builder.Build();
 

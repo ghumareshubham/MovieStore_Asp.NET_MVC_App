@@ -1,4 +1,4 @@
-﻿ @model MovieStoreMvc.Models.DTO.RegistrationModel
+﻿     @model MovieStoreMvc.Models.DTO.RegistrationModel
 
 
   @{
@@ -26,6 +26,9 @@
       <div class="input-container">
           <label asp-for="Username" class="w-40">Username</label>
           <input type="text" class="input" asp-for="Username">
+        <div class="message-box pd-x-28 error">
+            <span asp-validation-for="Username"></span>
+        </div>
       </div>
 
       <div class="input-container">

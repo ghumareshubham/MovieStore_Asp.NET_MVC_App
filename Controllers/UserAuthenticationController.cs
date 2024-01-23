@@ -27,35 +27,35 @@ namespace MovieStoreMvc.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Registration (RegistrationModel model)
+        public async Task<IActionResult> Registration(RegistrationModel model)
         {
-            //var model = new RegistrationModel
-            //{
-            //    Email = "admin@gmail.com",
-            //    Username = "admin",
-            //    Name = "Shubham",
-            //    Password = "Admin@123",
-            //    PasswordConfirm = "Admin@123",
-            //    Role = "Admin"
-            //};
-            // if you want to register with user , Change Role="User"
-            //var result = await authService.RegisterAsync(model);
-            //return Ok(result.Message);
+            /*    var model1 = new RegistrationModel
+                {
+                    Email = "admin@gmail.com",
+                    Username = "admin",
+                    Name = "Shubham",
+                    Password = "Admin@123",
+                    PasswordConfirm = "Admin@123",
+                    Role = "Admin"
+                };
+                //if you want to register with user , Change Role = "User"
+                var result = await authService.RegisterAsync(model1);
+                return Ok(result.Message);*/
 
 
-            if (!ModelState.IsValid)
-                return View(model);
+             if (!ModelState.IsValid)
+                  return View(model);
 
-            model.Role = "Admin";
-            
-            var result = await authService.RegisterAsync(model);
-            if (result.StatusCode == 1)
-                return RedirectToAction("Index", "Home");
-            else
-            {
-                TempData["msg"] = "Could not Register..";
-                return RedirectToAction(nameof(Login));
-            }
+              
+
+              var result = await authService.RegisterAsync(model);
+              if (result.StatusCode == 1)
+                  return RedirectToAction("Index", "Home");
+              else
+              {
+                  TempData["msg"] = "Could not Register..";
+                  return RedirectToAction(nameof(Login));
+              }
         }
 
         public async Task<IActionResult> Login()

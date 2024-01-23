@@ -23,6 +23,7 @@ namespace MovieStoreMvc.Repositories.Implementation
         //Register
         public async Task<Status> RegisterAsync(RegistrationModel model)
         {
+            model.Role = "User";
             Console.WriteLine(model.Role);
             Console.WriteLine("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&******************************************");
 

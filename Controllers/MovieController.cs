@@ -6,7 +6,7 @@ using MovieStoreMvc.Repositories.Abstract;
 
 namespace MovieStoreMvc.Controllers
 {
-    [Authorize(Policy = "RequireAdminRole")]
+    [Authorize(Roles = "Admin")]
     public class MovieController : Controller
     {
         private readonly IMovieService _movieService;

@@ -250,3 +250,4 @@ D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieSt
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\obj\Debug\net8.0\MovieStoreMvc.pdb
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\obj\Debug\net8.0\MovieStoreMvc.genruntimeconfig.cache
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\obj\Debug\net8.0\ref\MovieStoreMvc.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\obj\Debug\net8.0\MovieStoreMvc.sourcelink.json

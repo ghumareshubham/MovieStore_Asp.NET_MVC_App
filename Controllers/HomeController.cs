@@ -30,5 +30,10 @@ namespace MovieStoreMvc.Controllers
             return View(movie);
         }
 
+        public IActionResult AccessDeniedPage()
+        {
+            return View();
+        }
+
     }
 }
