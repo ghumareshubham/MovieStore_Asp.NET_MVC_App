@@ -12,8 +12,8 @@ using MovieStoreMvc.Models.Domain;
 namespace MovieStoreMvc.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240123142931_initial")]
-    partial class initial
+    [Migration("20240124094606_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

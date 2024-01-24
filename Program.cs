@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Repositories.Abstract;
 using MovieStoreMvc.Repositories.Implementation;
+using System.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -69,5 +70,52 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=LandingPage}/{id?}");
+
+//seeding Admin and User role 
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    var roles = new[] { "Admin", "User" };
+    foreach (var role in roles)
+    {
+        if (!await roleManager.RoleExistsAsync(role))
+        {
+           await roleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
+}
+
+
+//seeding default Admin Role to applicatin 
+using (var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+    string email = "admin@gmail.com";
+    string Username = "admin";
+    string Name = "Shubham";
+    string Password = "Admin@123";
+    
+    if (await userManager.FindByNameAsync(Username) == null)
+    {
+
+        var user = new ApplicationUser();
+        user.Name = Name;
+        user.Email= email;
+        user.UserName= Username;
+        user.EmailConfirmed= true;
+        user.PhoneNumberConfirmed= true;
+        user.SecurityStamp = Guid.NewGuid().ToString();
+
+        await userManager.CreateAsync(user, Password);
+        await userManager.AddToRoleAsync(user, "Admin");
+
+
+    }
+  
+}
+
+
 
 app.Run();

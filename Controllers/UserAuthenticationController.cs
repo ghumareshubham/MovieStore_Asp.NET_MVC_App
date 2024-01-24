@@ -11,12 +11,7 @@ namespace MovieStoreMvc.Controllers
         {
             this.authService = authService;
         }
-        /* We will create a user with admin rights, after that we are going
-          to comment this method because we need only
-          one user in this application 
-          If you need other users ,you can implement this registration method with view
-          I have create a complete tutorial for this, you can check the link in description box
-         */
+      
 
 
         public IActionResult Registration()
@@ -29,20 +24,7 @@ namespace MovieStoreMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> Registration(RegistrationModel model)
         {
-            /*    var model1 = new RegistrationModel
-                {
-                    Email = "admin@gmail.com",
-                    Username = "admin",
-                    Name = "Shubham",
-                    Password = "Admin@123",
-                    PasswordConfirm = "Admin@123",
-                    Role = "Admin"
-                };
-                //if you want to register with user , Change Role = "User"
-                var result = await authService.RegisterAsync(model1);
-                return Ok(result.Message);*/
-
-
+         
              if (!ModelState.IsValid)
                   return View(model);
 
@@ -50,7 +32,7 @@ namespace MovieStoreMvc.Controllers
 
               var result = await authService.RegisterAsync(model);
               if (result.StatusCode == 1)
-                  return RedirectToAction("Index", "Home");
+                  return RedirectToAction("Login", "UserAuthentication");
               else
               {
                   TempData["msg"] = "Could not Register..";
