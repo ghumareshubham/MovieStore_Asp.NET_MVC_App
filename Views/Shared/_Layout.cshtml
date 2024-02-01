@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="/images/movie_filter_FILL0_wght400_GRAD0_opsz48.svg">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+
 </head>
 <body>
     <nav class="nav-bar">
@@ -49,6 +53,7 @@
     </nav>
     <div class="container">
        @RenderBody()
+        @RenderSection("Scripts", required: false)
     </div>
     <footer>
         &#169; @DateTime.UtcNow.Year Shubham Ghumare

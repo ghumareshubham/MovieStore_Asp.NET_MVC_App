@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 :root {
-  --bg-color: rgb(255, 255, 255);
-  --font-mukta: "Mukta", sans-serif;
+    --bg-color: rgb(238, 240, 229);
+    --font-mukta: "Mukta", sans-serif;
 }
 body {
   width: 100%;

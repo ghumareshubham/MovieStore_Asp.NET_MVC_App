@@ -1,9 +1,10 @@
 ﻿@model MovieStoreMvc.Models.DTO.LoginModel
+
 @{
 }
 
 
-<form class="w-40" asp-action="Login" method="post">
+<form class="w-40" asp-action="Login" method="post" id="loginForm">
     <h2 class="pb-10">Login</h2>
     <div class="input-container">
         <label asp-for="Username" class="w-40">Username</label>
@@ -21,19 +22,51 @@
     <div class="message-box pd-x-28 error">
         <span asp-validation-for="Password"></span>
     </div>
-  
 
-    @if (TempData["msg"] != null)
-    {
-        <div class="alert mb-1">
-            @TempData["msg"]
-    </div>
-    }
+
+   
+
+
+
 
     <div class="input-container">
-        <button class="btn btn-default" type="submit">Login</button>
+        <button class="btn btn-default" id="loginButton" type="submit">Login</button>
 @*          <button class="btn btn-default" type="text" href="/UserAuthentication/Registration">SignUp</button>
  *@        <a class="btn btn-sec" href="/UserAuthentication/Registration">SignUp</a>
          
     </div>
+
+
+   
+
 </form>
+
+
+@section Scripts {
+  
+    @if (ViewBag.ShowSweetAlert != null && (bool)ViewBag.ShowSweetAlert)
+    {
+        <script>
+           
+            document.addEventListener('DOMContentLoaded', function () {
+           
+            var loginButton = document.getElementById('loginButton');
+
+           
+            loginButton.addEventListener('click', function (event) {
+          
+            event.preventDefault();
+            Swal.fire({
+            icon: 'success',
+            title: 'Login Successful',
+            text: '@Html.Raw(ViewBag.SweetAlertMessage)',
+            timer: 7000, // Set the timer in milliseconds (3 seconds in this example)
+            showConfirmButton: false,
+            });
+            
+            });
+            });
+        </script>
+    }
+}
+

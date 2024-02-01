@@ -53,7 +53,12 @@ namespace MovieStoreMvc.Controllers
 
             var result = await authService.LoginAsync(model);
             if (result.StatusCode == 1)
+            {
+                //TempData["msg"] = "logged in..";
+                ViewBag.ShowSweetAlert = true;
+                ViewBag.SweetAlertMessage = "logged in..";
                 return RedirectToAction("Index", "Home");
+            }
             else
             {
                 TempData["msg"] = "Could not logged in..";
