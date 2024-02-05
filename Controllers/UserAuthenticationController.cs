@@ -31,13 +31,16 @@ namespace MovieStoreMvc.Controllers
               
 
               var result = await authService.RegisterAsync(model);
-              if (result.StatusCode == 1)
-                  return RedirectToAction("Login", "UserAuthentication");
-              else
-              {
-                  TempData["msg"] = "Could not Register..";
-                  return RedirectToAction(nameof(Login));
-              }
+            if (result.StatusCode == 1)
+            {
+                TempData["SuccessMsg"] = "Register Successfully....";
+                return RedirectToAction("Login", "UserAuthentication");
+            }
+            else
+            {
+                TempData["ErrorMsg"] = "Failed To Register...";
+                return RedirectToAction(nameof(Login));
+            }
         }
 
         public async Task<IActionResult> Login()
@@ -54,14 +57,13 @@ namespace MovieStoreMvc.Controllers
             var result = await authService.LoginAsync(model);
             if (result.StatusCode == 1)
             {
-                //TempData["msg"] = "logged in..";
-                ViewBag.ShowSweetAlert = true;
-                ViewBag.SweetAlertMessage = "logged in..";
+                TempData["SuccessMsg"] = "Logged In....";
+              
                 return RedirectToAction("Index", "Home");
             }
             else
             {
-                TempData["msg"] = "Could not logged in..";
+                TempData["ErrorMsg"] = "Invalid Credentials...";
                 return RedirectToAction(nameof(Login));
             }
         }

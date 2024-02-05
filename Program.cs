@@ -8,7 +8,7 @@ using System.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the DI container.
 builder.Services.AddControllersWithViews();
 //defining dependency injection
 builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
@@ -72,7 +72,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=LandingPage}/{id?}");
 
-//seeding Admin and User role 
+/*//seeding Admin and User role 
 using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
@@ -115,7 +115,7 @@ using (var scope = app.Services.CreateScope())
 
     }
   
-}
+}*/
 
 
 

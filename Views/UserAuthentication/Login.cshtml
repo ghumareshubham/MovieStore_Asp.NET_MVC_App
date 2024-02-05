@@ -3,6 +3,7 @@
 @{
 }
 
+<partial name="SuccessErrorNotification" />
 
 <form class="w-40" asp-action="Login" method="post" id="loginForm">
     <h2 class="pb-10">Login</h2>
@@ -24,10 +25,15 @@
     </div>
 
 
-   
 
 
 
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert mb-1 alert-success">
+            @TempData["msg"]
+        </div>
+    }
 
     <div class="input-container">
         <button class="btn btn-default" id="loginButton" type="submit">Login</button>
@@ -41,7 +47,7 @@
 
 </form>
 
-
+@* 
 @section Scripts {
   
     @if (ViewBag.ShowSweetAlert != null && (bool)ViewBag.ShowSweetAlert)
@@ -68,5 +74,5 @@
             });
         </script>
     }
-}
+} *@
 

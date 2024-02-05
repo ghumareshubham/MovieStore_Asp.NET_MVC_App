@@ -1,6 +1,7 @@
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\appsettings.Development.json
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\appsettings.json
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\bundleconfig.json
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\libman.json
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\MovieStoreMvc.staticwebassets.runtime.json
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\MovieStoreMvc.exe
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\MovieStoreMvc.deps.json
@@ -251,3 +252,12 @@ D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieSt
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\obj\Debug\net8.0\MovieStoreMvc.pdb
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\obj\Debug\net8.0\MovieStoreMvc.genruntimeconfig.cache
 D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\obj\Debug\net8.0\ref\MovieStoreMvc.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\MY FOLDER #\My DOTNET Stuff\MovieStoreMvc-master\MovieStoreMvc-master\MovieStoreMvc\bin\Debug\net8.0\Microsoft.JSInterop.dll

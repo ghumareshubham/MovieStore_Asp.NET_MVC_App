@@ -41,14 +41,22 @@ label{
     border-radius: 5px;
 }
 
-.alert{
-    background-color:rgb(177, 228, 249);
+.alert-success {
+    background-color: rgb(115, 144, 114);
     padding: 0.5rem;
-  font-size: 17px;
-  color: var(--primary-color);
-  border-radius: 5px;
-  box-shadow: 0 3px 3px 0 rgb(4, 70, 96);
+    font-size: 17px;
+    color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 0 rgb(4, 70, 96);
+}
 
+.alert {
+    background-color: rgb(177, 228, 249);
+    padding: 0.5rem;
+    font-size: 17px;
+    color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 0 rgb(4, 70, 96);
 }
 
 .btn{
